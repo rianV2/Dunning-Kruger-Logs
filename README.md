@@ -104,3 +104,23 @@ a cognitive bias that causes people to overestimate their knowledge or abilities
 - Abstraction
 - Inheritance
 - Polymorphism
+
+## LLM
+Fine Tuning
+- train existing model for more context accurate
+- Need to provide input output, and good data
+- Requires training
+Prompt Engineering
+- adjust ai prompt aim clear guidance for ai
+RAG, Retrieval-Augmented Generation
+- give ai a document knowledge
+LangChain, 
+- python frameworks for building RAG document index
+- Building vector space by chunking the documents
+Temparature
+- It controls the randomness in the model's word choices.
+- Lower = safer and more accurate (technical), higher = riskier and more creative (poem).
+How to keep chat in context
+- can pass previous chats history, or same prompt.
+How to split personality
+- every request should send same prompt personality guidance
