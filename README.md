@@ -1,27 +1,29 @@
 # Dunning-Kruger-Logs
 a cognitive bias that causes people to overestimate their knowledge or abilities
 
-Data Structure
+## Data Structure
 - HashTable = fast lookup, map in go, dict in python, where offer O(1)
 - DoublyLinkedList = fast removal, fast insertion, use more memory need to store pointer of next and prev node
 - LinkedList
+- Stack = FIFO first in first out, LIFO last in first out
 
-Algorithm
+## Algorithm
 - BFS - https://www.youtube.com/watch?v=6ZnyEApgFYg
 
 
-Big O Notation
-Time complexity
+## Big O Notation
+### Time complexity
 - focus on highest growth rate rather than exact execution counts
 - O(NM) + O(M) = O(NM)
 - if data result from O(NM), loop through data is same as O(NM), ignore constant factor, result to O(NM)
 - The dominant term in Big-O notation is the largest one.
-Space complexity
+### Space complexity
 - init variable of loop O(n)
 - https://www.youtube.com/watch?v=rHM3zWgnPVA
 
 
-Distributed System
+## Distributed System
+### Pattern
 - Ambassador, imagine busy ceo with an assistent, proxy to handle logging/monitoring/retries
     - kubernetes envoy
 - CQRS, split between read and write of database
@@ -41,3 +43,64 @@ Distributed System
     - cassandra
 - Strangle Fig, replace strangle fig tree grow around tree and completely replacing them
     - migrating from legacy system to modern gradually rather than replace all system
+
+
+### Database
+![CAP Theorem](cap-theorem.png)
+- https://www.youtube.com/watch?v=BHqjEjzAicA&t=1s
+- https://www.youtube.com/watch?v=BTKBS_GdSms
+- Ex: replica master communication
+- CAP Theorem (Consistency, Availability, Partition Tolerance)
+    - partition means disconnected tolerance
+    - CP (Consistency + Partition Tolerance)
+        - Always consistent, but may be unavailable during network failures.
+        - MongoDB (single-node), HBase, Zookeeper
+    - AP (Availability + Partition Tolerance)
+        - Always available, but may return stale data (eventual consistency).
+        - DynamoDB, Cassandra, CouchDB
+    - CA (Consistency + Availability)
+        - Not possible in a distributed system. 
+        - A system that is both fully consistent and fully available cannot tolerate network failures. 
+    - sometimes not always works, example we can allow read at 1 node but cannot write
+- Connection Pooling
+    - when we connect to db, we open connection after using it we close the connection
+    - for connection pooling, we will keep the connection open for the other operation of operation, not immediately close it
+    - this ensure, we don't frequently open and close the connection
+- Eventually consistent
+    - We cannot have strongly consistent database data, the database need a time to make it consistent
+    - Example for pub/sub event, there will be eventually consistent data between service which publish and service which consume
+- Indexing
+    - need to make sure a query hit appropriate index, explain analyze
+    - drawback for indexing is db need more time to write data, and update the index
+
+### Load Balancer
+- round robin, alternate between pods
+- worker pool, pods will take other tasks if they finish
+
+
+## System Design
+- its behavioral question, easiest if you ever had experience
+
+## Test
+- unit test
+- integration test
+- snapshot test
+
+## Behavioral
+- rust vs golang
+    - our payment service got bunch of issue, where data from our db and third party not sync
+    - we've been working with go, new engineer come and try to build a new payment service with rust
+    - i give my opinion that we're tight with resources, introducing new learning curve, and not sure if new joiner can learn it directly
+    - meanwhile we disagree, actually he built the service underground, at first the service will function as source of truth
+    - but then our pm suggest to just make rust project as our payment v2
+    - then new feature and issue comes, but not everyone can touch it
+    - we've been trying to move it again to go
+
+## SOLID Principle
+- https://www.linkedin.com/posts/elliotone_c-solid-principles-explianed-by-elliot-one-ugcPost-7293055382741020672-Uk3C?utm_source=share&utm_medium=member_desktop&rcm=ACoAABsEHr8B2VbhRjK2xfEDzzeVePNcT92-MFM
+
+## OOP Paradigm
+- Encaptulation
+- Abstraction
+- Inheritance
+- Polymorphism
