@@ -95,6 +95,26 @@ a cognitive bias that causes people to overestimate their knowledge or abilities
     - but then our pm suggest to just make rust project as our payment v2
     - then new feature and issue comes, but not everyone can touch it
     - we've been trying to move it again to go
+- if there is bugs
+    1. ask a few question, so i can get more info (device, users, timestamp, ss)
+        - What were the exact steps?
+        - What environment or version?
+        - Any logs or screenshots?
+    2. try to reproduce
+    3. check company wiki if any, check if similar/related issue ever exist
+    4. asses impact
+        - is it breaking the flow?
+        - is it affect all user?
+        - is it new issue?
+    5. create a ticket
+        - logs
+        - ss
+        - step to reproduce
+    6. if urgent will put to current sprint, if not will doing it on next sprint
+    7. deploy and test
+    8. report back
+- how to handle bugs
+    - always adding buffer time on sprint planning
 
 ## SOLID Principle
 - https://www.linkedin.com/posts/elliotone_c-solid-principles-explianed-by-elliot-one-ugcPost-7293055382741020672-Uk3C?utm_source=share&utm_medium=member_desktop&rcm=ACoAABsEHr8B2VbhRjK2xfEDzzeVePNcT92-MFM
@@ -124,3 +144,8 @@ How to keep chat in context
 - can pass previous chats history, or same prompt.
 How to split personality
 - every request should send same prompt personality guidance
+
+## Golang
+- What is the role of the select statement when used with channels in Go? To allow waiting on multiple channel operations
+- An int and a bool. What is the memory usage of an instance? 9 bytes
+- What does the recover() function return when called within a deferred function after a panic? Its panic value
