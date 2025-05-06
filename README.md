@@ -88,13 +88,22 @@ a cognitive bias that causes people to overestimate their knowledge or abilities
 
 ## Behavioral
 - rust vs golang
-    - our payment service got bunch of issue, where data from our db and third party not sync
-    - we've been working with go, new engineer come and try to build a new payment service with rust
-    - i give my opinion that we're tight with resources, introducing new learning curve, and not sure if new joiner can learn it directly
-    - meanwhile we disagree, actually he built the service underground, at first the service will function as source of truth
-    - but then our pm suggest to just make rust project as our payment v2
-    - then new feature and issue comes, but not everyone can touch it
-    - we've been trying to move it again to go
+    - we had persistent issue with data inconsistency between our payment and a third party payment provider
+    - our payment service written in go, had some legacy complexity
+    - a new engineer proposed and eventually started a rewrite of the service in rust, initially as side project/poc
+    - while i appricated the initiative and technical strengh of rust, i raised concern, we were tight on engineering resources
+        - the team didn't have prior experience with rust, added a steep learning curve, and potential maintenance risks
+    - well, despite that the project gained traction, becoming source of truth and eventually positined as our payment v2
+    - over time, new features and bugs accumulated, but only that engineer could comfortably work on it
+        - the team struggled to contribute
+        - and onboarding others to support it proved difficult
+        - then we decided to migrate the functionality back to Go to restore team wide maintainabilty
+    - from this experience i learned that
+        - being software engineer is not just about writing efficient code
+        - its about making scalable, team aligned technical decisions
+        - had we done more structured technical analysis and involved stakeholder earlier
+        - we might have either committed fully to rust with a training plan
+        - or avoided split in direction entirely
 - if there is bugs
     1. ask a few question, so i can get more info (device, users, timestamp, ss)
         - What were the exact steps?
@@ -113,7 +122,7 @@ a cognitive bias that causes people to overestimate their knowledge or abilities
     6. if urgent will put to current sprint, if not will doing it on next sprint
     7. deploy and test
     8. report back
-- how to handle bugs
+- how to handle bugs in current plan
     - always adding buffer time on sprint planning
 
 ## SOLID Principle
