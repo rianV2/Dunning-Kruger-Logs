@@ -1,14 +1,21 @@
 # Dunning-Kruger-Logs
 a cognitive bias that causes people to overestimate their knowledge or abilities
 
-## Data Structure
+
+## DSA (Data Structure & Algorithm)
+Here, we will try to grind using Ashish Pratap Singh module
+- https://blog.algomaster.io/p/15-leetcode-patterns
+- https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming
+- https://www.youtube.com/watch?v=DjYZk8nrXVY
+
+### Data Structure
 - HashTable = fast lookup, map in go, dict in python, where offer O(1)
 - DoublyLinkedList = fast removal, fast insertion, use more memory need to store pointer of next and prev node
 - LinkedList
 - Stack = LIFO last in first out
 - Queue = FIFO first in first out, 
 
-## Algorithm
+### Algorithm
 - BFS - https://www.youtube.com/watch?v=6ZnyEApgFYg
 
 
