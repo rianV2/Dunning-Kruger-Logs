@@ -5,7 +5,8 @@ a cognitive bias that causes people to overestimate their knowledge or abilities
 - HashTable = fast lookup, map in go, dict in python, where offer O(1)
 - DoublyLinkedList = fast removal, fast insertion, use more memory need to store pointer of next and prev node
 - LinkedList
-- Stack = FIFO first in first out, LIFO last in first out
+- Stack = LIFO last in first out
+- Queue = FIFO first in first out, 
 
 ## Algorithm
 - BFS - https://www.youtube.com/watch?v=6ZnyEApgFYg
@@ -158,3 +159,10 @@ How to split personality
 - What is the role of the select statement when used with channels in Go? To allow waiting on multiple channel operations
 - An int and a bool. What is the memory usage of an instance? 9 bytes
 - What does the recover() function return when called within a deferred function after a panic? Its panic value
+- Slice manipulation (:)
+    - slice[start:end]
+    - [2:5] Give me elements from 2 to 5 (but not 5).
+    - s := []int{10, 20, 30, 40, 50}
+    - s[1:4]	{20, 30, 40}    From index 1 to 3 (4 not included)
+    - s[:3]	    {10, 20, 30}    From index 0 to index 2
+    - s[2:]     {30, 40, 50}    From index 2 to the end
