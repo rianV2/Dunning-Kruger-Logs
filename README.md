@@ -1,6 +1,7 @@
 # Dunning-Kruger-Logs
-a cognitive bias that causes people to overestimate their knowledge or abilities
-
+A cognitive bias that causes people to overestimate their knowledge or abilities.
+This page to always remind me that i know nothing about the world, so keep learning.
+Well, this is my cheat sheets for an interview.
 
 ## DSA (Data Structure & Algorithm)
 Here, we will try to grind using Ashish Pratap Singh module
