@@ -86,6 +86,9 @@ Here, we will try to grind using Ashish Pratap Singh module
 - round robin, alternate between pods
 - worker pool, pods will take other tasks if they finish
 
+## Protocol
+### HTTP
+- http/1, http/2
 
 ## System Design
 - its behavioral question, easiest if you ever had experience
@@ -94,6 +97,7 @@ Here, we will try to grind using Ashish Pratap Singh module
 - unit test
 - integration test
 - snapshot test
+- fuzz test
 
 ## Behavioral
 - rust vs golang
@@ -139,9 +143,13 @@ Here, we will try to grind using Ashish Pratap Singh module
 
 ## OOP Paradigm
 - Encaptulation
+    - Isolated variable within class (private, public)
 - Abstraction
+    - Creating abstract form, which required if any class want to implement (interface in go)
 - Inheritance
+    - Inherit data within parent
 - Polymorphism
+    - It can morp, transform, it can overwrite function from its parent (treated same if implemented in interface in go)
 
 ## LLM
 Fine Tuning
@@ -174,3 +182,10 @@ How to split personality
     - s[1:4]	{20, 30, 40}    From index 1 to 3 (4 not included)
     - s[:3]	    {10, 20, 30}    From index 0 to index 2
     - s[2:]     {30, 40, 50}    From index 2 to the end
+
+## Nodejs
+- eventemitter nodejs, microservices communication
+
+
+## Sandbox
+- TDD, Elastic APM
