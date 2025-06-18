@@ -18,6 +18,13 @@ Here, we will try to grind using Ashish Pratap Singh module
 
 ### Algorithm
 - BFS - https://www.youtube.com/watch?v=6ZnyEApgFYg
+- Search
+    - Binary search, split array to 2 over and over again, until condition meet O(log n)
+    - Tree traversal, traverse to tree node left and right O(n)
+    - Linear search, loop trough array O(n)
+- Sort
+    - Bubble Sort
+    - Quick sort O(n log n)
 
 
 ## Big O Notation
